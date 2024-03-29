@@ -100,9 +100,11 @@
                         op.optEl.selected = !!!op.optEl.selected;
                         //觸發 select 元素的 change 事件
                         el.dispatchEvent(new Event('change'));
-
+                        //時實更新已選擇項目
+                        div.refresh();
 
                     });
+                    
                     //勾選框元素添加點擊事件監聽器，當勾選框被點擊時切換其選中狀態。
                     ic.addEventListener('click', (ev) => {
                         ic.checked = !ic.checked;
